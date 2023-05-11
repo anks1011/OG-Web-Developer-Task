@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>OG Web Developer Task</title>
+</head>
+<body>
+  <h1 style=" padding-top: 3%; margin-left: 1.5em;">Exam<span style="color: rgb(62, 209, 235);">labs</span></h1>
+<br>
+<div class="container banner">
+    <div class="row">
+      <div class="col-sm-3">
+        <i class="fa fa-clock-o" style="font-size:36px"> Limited Time offer</i>
+      </div>
+      <div class="col-sm-5">
+        <div class="countdown">
+            <span class="days"></span>
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="seconds"></span>
+          </div>
+      </div>
+      <div class="col-sm-4">
+        <p style="font: 1em sans-serif; padding-top:10px ;">Get 10% OFF || <span style="color: rgb(102, 103, 103);">USE CODE:</span> EXAMSTART</p>
+      </div>
+    </div>
+  </div>
+<script>
+var countdownDate = new Date("May 14, 2023 23:59:59").getTime();
+
+var countdown = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var remainingTime = countdownDate - now;
+
+  var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+  document.querySelector('.days').textContent = days +" D";
+  document.querySelector('.hours').textContent = hours + " H";
+  document.querySelector('.minutes').textContent = minutes +' M';
+  document.querySelector('.seconds').textContent = seconds +' S' ;
+
+  
+  if (remainingTime < 0) {
+     countdownDate = new Date("May 30, 2023 23:59:59").getTime()
+  }
+}, 1000);
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
